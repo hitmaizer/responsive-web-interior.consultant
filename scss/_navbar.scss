@@ -6,15 +6,21 @@
     padding-inline: 76px; 
 }
 
+.navbar--logo {
+    border: 1px solid #FFFFFF;
+    
+}
+
 .navbar--logo_text {
     font-family: $crimson;
     font-style: normal;
     font-weight: 200;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 36px;
     /* identical to box height */
-
+    margin: 0;
     text-transform: uppercase;
+    padding: 8px;
 }
 
 .navbar--list_items {
@@ -26,5 +32,15 @@
     font-size: 18px;
     line-height: 22px;
     /* identical to box height */
+    a {
+    color: $white;
     text-decoration: none;
+    &:visited{
+        text-decoration: none;
+
+    }
+    &:link {
+        text-decoration: none;
+      }
+    }
 }
