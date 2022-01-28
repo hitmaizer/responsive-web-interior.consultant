@@ -144,6 +144,7 @@ body {
 
 .navbar--list_items {
   display: inline;
+  position: relative;
   margin: 26px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -151,6 +152,23 @@ body {
   font-size: 18px;
   line-height: 22px;
   /* identical to box height */
+}
+
+.navbar--list_items::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  left: 50%;
+  height: 1px;
+  background: #fffffF;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.navbar--list_items:hover::after {
+  left: 0;
+  width: 100%;
 }
 
 .navbar--list_items a {

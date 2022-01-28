@@ -76,12 +76,29 @@
 
 .navbar--list_items {
     display: inline;
+    position: relative;
     margin: 26px;
     font-family: $montserrat;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 0%;
+        left: 50%;
+        height: 1px;
+        background: $white;
+        transition: 0.4s ease-out;
+        
+    }
+    &:hover::after {
+        left: 0;
+        width: 100%;
+    }
     /* identical to box height */
     a {
     color: $white;
