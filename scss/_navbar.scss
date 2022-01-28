@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 42px;
+    padding-inline: 76px; 
+}
+
+.navbar--logo_text {
+    font-family: $crimson;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+}
+
+.navbar--list_items {
+    display: inline;
+    margin: 26px;
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    text-decoration: none;
+}
