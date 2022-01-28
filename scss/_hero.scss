@@ -1,10 +1,14 @@
 .hero--wrapper {
     display: flex;
-    padding: 150px 77px;
+    padding: 100px 77px;
     align-items: center;
     margin: auto;
     justify-content: space-between;
     gap: 96px;
+
+    @include respond-below(lg) {
+      flex-direction: column;
+    }
 }
 
 .hero--infosection_title {
@@ -55,6 +59,11 @@
     top: 710px;
     left: 70%;
     background: $gray;
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin: -220px;
+    margin-top: -200px;
 }
 
 
