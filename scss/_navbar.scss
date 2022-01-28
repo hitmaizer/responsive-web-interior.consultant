@@ -2,14 +2,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 42px 77px;
+    align-items: center;
+    padding: 0px 77px;
     padding-bottom: 0;
 
     @include respond-below(sm) {
       width: 90%;
       margin: 0 auto;
       padding: rem(16px) 0 0 0;
+      flex-direction: column;
     }
+}
+
+.mob--nav {
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .navbar--logo {
@@ -36,6 +45,35 @@
     padding: 8px;
 }
 
+#hamburger {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+
+    @include respond-below(sm) {
+      display: block;
+    }
+}
+
+.navbar--list {
+    
+    min-width: auto;
+    display: flex;
+    @include respond-below(sm) {
+        display: none;
+        flex-direction: column;
+        height: 100vh;
+      }
+}
+
+.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
 .navbar--list_items {
     display: inline;
     margin: 26px;
@@ -57,7 +95,5 @@
       }
     }
 
-    @include respond-below(sm) {
-      display: none;
-    }
+    
 }
