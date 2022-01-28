@@ -6,5 +6,9 @@
     line-height: 17px;
     /* identical to box height */
     color: $lightest-gray;
-    margin-bottom: 10px;
+
+    @include respond-below(sm) {
+      margin-top: auto;
+    }
+    
 }

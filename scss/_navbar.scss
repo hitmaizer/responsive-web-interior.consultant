@@ -4,10 +4,24 @@
     justify-content: space-between;
     padding: 42px 77px;
     padding-bottom: 0;
+
+    @include respond-below(sm) {
+      width: 90%;
+      margin: 0 auto;
+      padding: rem(16px) 0 0 0;
+    }
 }
 
 .navbar--logo {
     border: 1px solid #FFFFFF;
+    min-width: 101px;
+    min-height: 29px;
+    max-width: 101px;
+    max-height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     
 }
 
@@ -15,9 +29,8 @@
     font-family: $crimson;
     font-style: normal;
     font-weight: 200;
-    font-size: 14px;
-    line-height: 36px;
-    /* identical to box height */
+    font-size: 12px;
+    
     margin: 0;
     text-transform: uppercase;
     padding: 8px;
@@ -42,5 +55,9 @@
     &:link {
         text-decoration: none;
       }
+    }
+
+    @include respond-below(sm) {
+      display: none;
     }
 }

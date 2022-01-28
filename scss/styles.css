@@ -10,6 +10,28 @@ body {
   margin: 0;
 }
 
+@media (max-width: 767px) {
+  body {
+    margin: 0 auto;
+  }
+}
+
+.page--wrapper {
+  height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .page--wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,17 +47,36 @@ body {
   padding-bottom: 0;
 }
 
+@media (max-width: 767px) {
+  .navbar {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0 0 0;
+  }
+}
+
 .navbar--logo {
   border: 1px solid #FFFFFF;
+  min-width: 101px;
+  min-height: 29px;
+  max-width: 101px;
+  max-height: 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .navbar--logo_text {
   font-family: "Crimson Pro", serif;
   font-style: normal;
   font-weight: 200;
-  font-size: 14px;
-  line-height: 36px;
-  /* identical to box height */
+  font-size: 12px;
   margin: 0;
   text-transform: uppercase;
   padding: 8px;
@@ -65,6 +106,12 @@ body {
   text-decoration: none;
 }
 
+@media (max-width: 767px) {
+  .navbar--list_items {
+    display: none;
+  }
+}
+
 .hero--wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,19 +120,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: auto;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 96px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .hero--wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0;
+    padding: 2rem;
+    gap: 1rem;
   }
 }
 
@@ -97,6 +147,15 @@ body {
   line-height: 61px;
 }
 
+@media (max-width: 1199px) {
+  .hero--infosection_title {
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 2.875rem;
+    /* identical to box height */
+  }
+}
+
 .hero--infosection_description {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -106,6 +165,13 @@ body {
   max-width: 410px;
 }
 
+@media (max-width: 1199px) {
+  .hero--infosection_description {
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+  }
+}
+
 .hero--image {
   position: relative;
 }
@@ -113,6 +179,12 @@ body {
 .hero--image_img {
   max-width: 800px;
   z-index: 0;
+}
+
+@media (max-width: 1199px) {
+  .hero--image_img {
+    max-width: 100%;
+  }
 }
 
 .hero--infosection_button {
@@ -128,20 +200,23 @@ body {
 }
 
 .hero--card {
-  margin-bottom: -20px;
-  width: 410px;
+  min-width: 410px;
   min-height: 189px;
   padding: 24px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  top: 710px;
-  left: 70%;
   background: #181719;
-  display: inline-block;
-  float: left;
-  position: relative;
-  margin: -220px;
-  margin-top: -200px;
+  position: absolute;
+  right: 5%;
+  bottom: -50px;
+}
+
+@media (max-width: 575px) {
+  .hero--card {
+    min-width: auto;
+    max-width: 80%;
+    min-height: 138px;
+  }
 }
 
 .card--top {
@@ -169,6 +244,13 @@ body {
   margin: 0;
 }
 
+@media (max-width: 767px) {
+  .card--name {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
 .card--position {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -180,10 +262,24 @@ body {
   /* identical to box height */
 }
 
+@media (max-width: 767px) {
+  .card--position {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
 .card--text {
   font-family: "Lora", serif;
   font-style: normal;
   max-width: 287px;
+}
+
+@media (max-width: 767px) {
+  .card--text {
+    font-size: 18px;
+    line-height: 23px;
+  }
 }
 
 .page--footer {
@@ -194,5 +290,10 @@ body {
   line-height: 17px;
   /* identical to box height */
   color: #A9A9A9;
-  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .page--footer {
+    margin-top: auto;
+  }
 }

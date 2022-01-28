@@ -6,4 +6,16 @@ body {
     background-color: $gray;
     color: $white;
     margin: 0;
+    @include respond-below(sm) {
+      margin: 0 auto;
+    }
+}
+
+.page--wrapper{
+    height: 100vh;
+
+    @include respond-below(sm) {
+        display: flex;
+        flex-direction: column;
+    }
 }
